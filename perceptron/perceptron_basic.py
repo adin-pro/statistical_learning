@@ -40,6 +40,7 @@ if __name__ == '__main__':
         mask = (pred!=data[:,2])
         mask = np.where(mask==1)
         mask = np.array(mask,dtype=int).squeeze()
+        # draw the seperate line and the points
         plt.cla()
         error_points = np.ma.masked_where(flag!=pred,size)
         right_points = np.ma.masked_where(flag==pred,size)
@@ -50,6 +51,7 @@ if __name__ == '__main__':
                     fontdict={'size': 10, 'color':  'm'})            
         plt.pause(0.1)
         if mask.size!=0:
+            # update the weight
             random_index = np.random.choice(mask)
             gradient = data[random_index,2]*data[random_index,:2]
             w = w + 0.1*gradient
