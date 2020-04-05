@@ -6,7 +6,11 @@
 **Topics including**:
 
 - perceptron
+  - basic
+  - duality
 - k-nearest neighbor
+  - linear knn
+  - kd tree
 - naive bayes
 
 ***to be continued...***

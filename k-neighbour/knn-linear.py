@@ -70,7 +70,7 @@ def classifyPerson():
     datingDataMat, labels = file2matrix('k-neighbour/datingTestSet2.txt')
     normMat, ranges, minVals = autoNorm(datingDataMat)
     inArr = np.array([ffMiles, percentTats, iceCream])
-    classifyresult = classify0((inArr - minVals)/ranges, normMat, labels, 3)
+    classifyresult = classify0((inArr - minVals)/ranges, normMat, labels, 20)
     print(" You will probably like the person:",resultList[int(classifyresult) - 1])
 
 if __name__ == '__main__':
